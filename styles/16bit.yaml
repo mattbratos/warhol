@@ -1,0 +1,15 @@
+# warhol style profile
+name: 16bit
+description: "16-bit pixel art with neon colors and vaporwave vibes."
+
+prompt_prefix:
+  - "16-bit pixel art"
+  - "neon color palette"
+  - "vaporwave mood"
+  - "sharp pixel edges, no anti-aliasing blur"
+
+negative_prompt:
+  - "photorealism"
+  - "muddy colors"
+  - "low contrast"
+

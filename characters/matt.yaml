@@ -1,0 +1,14 @@
+# warhol character profile
+name: matt
+description: "A young, handsome guy in his 20s."
+
+traits:
+  - "pink hair buzzcut"
+  - "confident expression"
+
+outfit:
+  - "Adidas sweatpants"
+  - "Adidas Superstar sneakers"
+
+prompt: ""
+

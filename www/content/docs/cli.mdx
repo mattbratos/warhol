@@ -1,0 +1,56 @@
+---
+title: CLI
+description: Current Warhol command surface.
+---
+
+## Commands
+
+```text
+warhol
+warhol style init <name> [--output <path>]
+warhol character init <name> [--output <path>]
+warhol generate --style <path-or-name> [--character <name-or-path>|-<name>] --prompt <text> [--provider google|openai] [--model <name>] [--out-dir <dir>]
+warhol version
+```
+
+Running `warhol` with no arguments starts an onboarding prompt that greets you and asks for `GEMINI_API_KEY`.
+
+## style init
+
+Creates a starter style YAML profile.
+
+Example:
+
+```bash
+warhol style init noir --output styles/noir.yaml
+```
+
+## character init
+
+Creates a starter character YAML profile.
+
+Example:
+
+```bash
+warhol character init matt --output characters/matt.yaml
+```
+
+## generate
+
+Generates an image with OpenAI and stores both the image and metadata.
+
+Example:
+
+```bash
+export GEMINI_API_KEY=your_api_key_here
+warhol generate --style 16bit -matt --prompt "portrait on a neon-lit street"
+```
+
+Notes:
+
+- `--style 16bit` resolves to `styles/16bit.yaml`.
+- `-matt` is shorthand for `--character matt` and resolves to `characters/matt.yaml`.
+- Default provider is `google`.
+- Default Google model is `gemini-2.5-flash-image` ("Nano Banana").
+- For OpenAI fallback use `--provider openai` and `OPENAI_API_KEY`.
+- `--dry-run` lets you inspect prompt composition without generating an image.
